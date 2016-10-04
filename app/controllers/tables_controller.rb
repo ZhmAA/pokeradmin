@@ -20,7 +20,7 @@ class TablesController < ApplicationController
   private
 
   def table_params
-    params.require(:table).permit(:title, :gamestart)
+    params.require(:table).permit(:title, :gamestart, :players)
   end
 
 end
