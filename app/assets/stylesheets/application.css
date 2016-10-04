@@ -13,3 +13,49 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-image: url(/images/poker_bg.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+.container {
+  padding-top: 30px;
+}
+
+label {
+  display: none;
+}
+
+.button {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+/*Styles for poker tables column*/
+
+.poker_tables {
+  position: relative;
+  width: 400px;
+  height: 300px;
+}
+
+.poker_tables img {
+  position: absolute;
+  width: 400px;
+  top: 0px;
+  left: 0px;
+}
+
+.poker_tables_text {
+  position: absolute;
+  left: 29%;
+  top: 21%;
+}
+
+/*Styles for user field*/
+
+.all_users {
+  padding-top: 50px;
+}

@@ -1,0 +1,8 @@
+= simple_form_for @user do |f|
+  = f.input :email
+  - @tables.each do |table|
+    %p
+      = f.fields_for :tables do |ff|
+        = ff.check_box table.id
+      = table.title
+  = f.button :submit, "Add User to game", :class => "btn btn-primary"

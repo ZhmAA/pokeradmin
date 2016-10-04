@@ -1,0 +1,21 @@
+.row
+  .col-md-6
+    - @tables.each do |table|
+      .poker_tables
+        %p
+          %img{:src => "/images/poker-table.png"}
+        .poker_tables_text
+          %p= table.title
+          %p= table.gamestart
+          %p
+            Players: #{table.players} of 6
+    %p Create new poker game:
+    = render "form"
+  .col-md-6
+    %p Enter user email:
+    = render "users/form"
+    .all_users
+      %p All Players:
+      %ul
+      - @users.each do |user|
+        %li= user.email
