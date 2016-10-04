@@ -5,13 +5,10 @@ class Table < ApplicationRecord
   validates :gamestart, presence: true
 
   scope :active_tables, -> { where('gamestart >= ?', Time.current) }
-  scope :full_tables, -> { where('players < ?', 6) }
+  scope :full_tables, -> { where('players < 6') }
 
   def free_places
-    if self.players < 6
-      return true
-    end
-    false
+    self.players < 6
   end
 
   def new_player

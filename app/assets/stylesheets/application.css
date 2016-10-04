@@ -44,8 +44,8 @@ label {
 .poker_tables img {
   position: absolute;
   width: 400px;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 }
 
 .poker_tables_text {
