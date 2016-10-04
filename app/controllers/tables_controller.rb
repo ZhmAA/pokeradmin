@@ -2,7 +2,7 @@ class TablesController < ApplicationController
   
   def homepage 
     @table = Table.new
-    @tables = Table.active_tables.full_tables
+    @tables = Table.active_tables.full_tables.reverse
     @user = User.new
     @users = User.all
   end
