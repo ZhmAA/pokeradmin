@@ -4,11 +4,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       add_player
-      redirect_to root_path
       flash[:notice] = "User create successful and add to game!"
     else
       add_player
-      redirect_to root_path
       flash[:notice] = "Exist user add to game"
     end
   end
@@ -24,6 +22,7 @@ class UsersController < ApplicationController
         @user.tables = [current_table]
       end
     end
+    redirect_to root_path
   end
 
   private
